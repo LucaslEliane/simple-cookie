@@ -61,7 +61,7 @@ interface MockWindow extends Window {
       this.$reInit();
       if (!config.expires && !config.maxAge) {
         window.console.warn(`cookie ${c_name} should have an expires or max-age value`);
-        return 
+        return;
       }
       let cookieString: string = '';
       cookieString += `${c_name}=${window.encodeURIComponent(config.value)}`;
